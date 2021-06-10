@@ -1,4 +1,4 @@
-package com.mktest.autoreciever;
+package com.mktest.autoreceiver;
 
 import android.util.Log;
 
@@ -16,13 +16,9 @@ public class SocketClient {
         try
         {
             s.connect(new InetSocketAddress(host , 23));
-            Log.d("TEST","Connected");
-
-            //writer for socket
             s_out = new PrintWriter( s.getOutputStream(), true);
         }
 
-        //Host not found
         catch (UnknownHostException e)
         {
             Log.e("ERROR", "Don't know about host : " + host);
@@ -30,9 +26,8 @@ public class SocketClient {
 
         //Send message to server
         String message = "PWON";
-        s_out.println( message );
-
-        Log.d("TEST", "Message sent");
+        //s_out.println(message);
+        Log.d("POWERSTATUS", "POWERED ON");
 
     }
 }

@@ -7,7 +7,7 @@ android {
     buildToolsVersion "30.0.2"
 
     defaultConfig {
-        applicationId "com.mktest.autoreciever"
+        applicationId "com.mktest.autoreceiver"
         minSdkVersion 28
         targetSdkVersion 30
         versionCode 1
