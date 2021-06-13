@@ -7,7 +7,7 @@ import java.net.*;
 
 public class SocketClient {
 
-    public void sendData() throws IOException {
+    public void sendData(String data) throws IOException {
 
         Socket s = new Socket();
         String host = "192.168.1.7";
@@ -25,9 +25,7 @@ public class SocketClient {
         }
 
         //Send message to server
-        String message = "PWON";
-        //s_out.println(message);
-        Log.d("POWERSTATUS", "POWERED ON");
-
+        Log.d("POWERSTATUS: ", data);
+        s_out.println(data);
     }
 }

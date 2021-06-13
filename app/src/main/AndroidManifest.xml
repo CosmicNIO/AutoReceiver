@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission." />
 
     <uses-feature
         android:name="android.software.leanback"
@@ -29,17 +30,11 @@
             </intent-filter>
         </activity>
 
-        <receiver android:name="com.mktest.autoreceiver.MyReceiver" android:enabled="true" android:exported="false">
+        <receiver android:name="com.mktest.autoreceiver.BootReceiver" android:enabled="true" android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.SCREEN_ON"/>
                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
             </intent-filter>
         </receiver>
-
-        <service
-            android:name="com.mktest.autoreceiver.BackgroundService"
-            android:enabled="true"
-            android:exported="true" />
 
     </application>
 
